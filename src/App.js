@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
+import { useState } from 'react';
 
 function App() {
+  const [value, setValue] = useState()
+
+  console.log(value)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+ <>
+    <PhoneInput
+      placeholder="Enter phone number"
+      value={value}
+      onChange={setValue}/>
+ </>
   );
 }
 
